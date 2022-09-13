@@ -567,7 +567,7 @@ var visualization;
 
 function drawVisualization() {
   var query = new google.visualization.Query('https://spreadsheets.google.com/tq?key=1Ro0gqReTJdCe3FCEA_yl9N8yaDAnlybWxXJrDZehc3g&output=html&gid=1998312191&range=A2:D&&usp=sharing');
-    query.setQuery('SELECT A, B, C, D  label A "Hari/ Tanggal", B "Waktu", C "Kegiatan", D "Keterangan"');
+    query.setQuery('SELECT A, B, C, D  label A "Tanggal", B "Waktu", C "Kegiatan", D "Ket"');
     query.send(handleQueryResponse);
 }
 
