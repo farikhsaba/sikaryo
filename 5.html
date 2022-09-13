@@ -549,7 +549,7 @@ only screen and (max-width: 760px),
 
 <body id="background">
   <div id="box">
-    <h4>ANGGOTA ALKEL</h4>
+    <h4>Agenda DPD RI DIY</h4>
     <script>
         /*!
  * 
@@ -565,7 +565,8 @@ only screen and (max-width: 760px),
 google.charts.load('current', {packages: ['table']});
 var visualization;
 
-var query = new google.visualization.Query('https://spreadsheets.google.com/tq?key=1dqjtaavjaOW5LlszsSY3jlhn8YnuUpkXebHQzTUY-6c&output=html&gid=1862932429&range=A2:G&&usp=sharing');
+function drawVisualization() {
+  var query = new google.visualization.Query('https://spreadsheets.google.com/tq?key=1dqjtaavjaOW5LlszsSY3jlhn8YnuUpkXebHQzTUY-6c&output=html&gid=1862932429&range=A2:G&&usp=sharing');
     query.setQuery('SELECT A, B, C, D, E, F, G  label A "Tgl Mulai", B "Tgl Sls", C "Start", D "End", E "Keg", F "Tempat", G "Ket"');
     query.send(handleQueryResponse);
 }
