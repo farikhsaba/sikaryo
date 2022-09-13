@@ -567,7 +567,7 @@ var visualization;
 
 function drawVisualization() {
   var query = new google.visualization.Query('https://spreadsheets.google.com/tq?key=1Ro0gqReTJdCe3FCEA_yl9N8yaDAnlybWxXJrDZehc3g&output=html&gid=1115351130&range=A2:E&&usp=sharing');
-    query.setQuery('SELECT A, B, C, D, E  label A "No", B "Nama", C "No Anggota", D "Provinsi", E "Alkel"');
+    query.setQuery('SELECT A, B, C, D, E  label A "No", B "Nama", C "No Agt", D "Provinsi", E "Alkel"');
     query.send(handleQueryResponse);
 }
 
