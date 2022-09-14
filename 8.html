@@ -549,7 +549,7 @@ only screen and (max-width: 760px),
 
 <body id="background">
   <div id="box">
-    <h4>Rekapitulasi Agenda DPD RI DIY</h4>
+    <h4>Layanan Keprotokolan</h4>
     <script>
         /*!
  * 
@@ -578,7 +578,7 @@ function handleQueryResponse(response) {
     }
     var data = response.getDataTable();
     visualization = new google.visualization.Table(document.getElementById('table'));
-    data.sort([{column: 0, desc: false},{column: 2, desc: false}]);
+    data.sort([{column: 0, asc: true},{column: 1, asc: true}]);
     visualization.draw(data, {
         allowHtml: true,
         legend: 'bottom'
