@@ -567,7 +567,7 @@ var visualization;
 
 function drawVisualization() {
   var query = new google.visualization.Query('https://spreadsheets.google.com/tq?key=1eJGIgef0qPVVabLLJu1fZaPlyT5ujVzEhU0ywnD_fbY&output=html&gid=1507948568&range=A2:N&&usp=sharing');
-    query.setQuery('SELECT A, D, E, F, H, B, K, N  label A "Tanggal", D "Mulai", E "Slsai", F "Jml", G "Tempat", H "Agenda", B "Instansi", K "PJ", N "HP"');
+    query.setQuery('SELECT A, D, E, F, G, H, B, K, N  label A "Tanggal", D "Mulai", E "Slsai", F "Jml", G "Tempat", H "Agenda", B "Instansi", K "PJ", N "HP"');
     query.send(handleQueryResponse);
    
 }
