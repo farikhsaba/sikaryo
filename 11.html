@@ -566,8 +566,8 @@ google.charts.load('current', {packages: ['table']});
 var visualization;
 
 function drawVisualization() {
-  var query = new google.visualization.Query('https://spreadsheets.google.com/tq?key=1eJGIgef0qPVVabLLJu1fZaPlyT5ujVzEhU0ywnD_fbY&output=html&gid=1635862395&range=A2:J&&usp=sharing');
-    query.setQuery('SELECT A, B, C, D, E, F, H, J  label A "Tanggal", B "Mulai", C "Selesai", D "Peserta", E "Tempat", F "Agenda", H "Instansi", J "PJ"');
+  var query = new google.visualization.Query('https://spreadsheets.google.com/tq?key=1eJGIgef0qPVVabLLJu1fZaPlyT5ujVzEhU0ywnD_fbY&output=html&gid=1635862395&range=A2:K&&usp=sharing');
+    query.setQuery('SELECT A, B, C, D, E, F, H, J, K  label A "Tanggal", B "Mulai", C "Slsai", D "Peserta", E "Tempat", F "Agenda", H "Instansi", J "PJ", K "HP"');
     query.send(handleQueryResponse);
    
 }
