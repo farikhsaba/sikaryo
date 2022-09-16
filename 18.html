@@ -567,7 +567,7 @@ var visualization;
 
 function drawVisualization() {
   var query = new google.visualization.Query('https://spreadsheets.google.com/tq?key=1T1jyO9N6b8-CVsSHCB2UJj9kEf9qnzpwyOCMERTMl6k&output=html&gid=846398142&range=A2:E&&usp=sharing');
-    query.setQuery('SELECT A, B, C, D, E, F  label A "Tgl ", B "Nama", C "Presensi", D "Waktu", E "Catatan"');
+    query.setQuery('SELECT A, B, C, D, E  label A "Tgl ", B "Nama", C "Presensi", D "Waktu", E "Catatan"');
     query.send(handleQueryResponse);
 }
 
