@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Dukungan Kegiatan Kantor DPD RI DIY</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,500|Open+Sans">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+   <script src="https://www.gstatic.com/charts/loader.js"></script>
+
+<style>
+    /* Tambahan styling */
+    #box {
+      text-align: center;
+      margin: 20px auto;
+      max-width: 900px;
+    }
+    #box img.responsive {
+      max-width: 100%;
+      height: auto;
+      margin: 15px 0;
+      border-radius: 8px;
+    }
+    #table {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+    }
+  </style>
+
+<style>
+body {
+	background: #fff;
+}
+.accordion .card {
+	background: none;
+	border: none;
+}
+.accordion .card .card-header {
+	background: none;
+	border: none;
+	padding: .4rem 1rem;
+	font-family: "Roboto", sans-serif;
+}
+.accordion .card-header h2 span {
+	float: left;
+	margin-top: 10px;
+}
+.accordion .card-header .btn {
+	color: #2f2f31;
+	font-size: 1.04rem;
+	text-align: left;
+	position: relative;
+	font-weight: 500;
+	padding-left: 2rem;
+}
+.accordion .card-header i {
+	font-size: 1.2rem;
+	font-weight: bold;
+	position: absolute;
+	left: 0;
+	top: 9px;
+}
+.accordion .card-header .btn:hover {
+	color: #ff8300;
+}
+.accordion .card-body {
+	color: #324353;
+	padding: 0.5rem 3rem;
+}
+.page-title {
+	margin: 3rem 0 3rem 1rem;
+	font-family: "Roboto", sans-serif;
+	position: relative;
+}
+.page-title::after {
+	content: "";
+	width: 80px;
+	position: absolute;
+	height: 3px;
+	border-radius: 1px;
+	background: #73bb2b;
+	left: 0;
+	bottom: -15px;
+}
+.accordion .highlight .btn {
+	color: #74bd30;
+}
+.accordion .highlight i {
+	transform: rotate(180deg);
+}
+.text-position{
+	text-align: left;
+}
+.table-position{
+	margin-top: 15px;
+	margin-bottom: 20px
+}
+
+.list-square {
+	list-style-type: square;
+}
+
+.list-circle {
+	list-style-type: circle;
+}
+
+.list-none {
+	list-style-type: none;
+}
+
+.responsive {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}	
+</style>
+<script>
+$(document).ready(function(){
+	// Add minus icon for collapse element which is open by default
+	$(".collapse.show").each(function(){
+		$(this).prev(".card-header").addClass("highlight");
+	});
+	
+	// Highlight open collapsed element 
+	$(".card-header .btn").click(function(){
+		$(".card-header").not($(this).parents()).removeClass("highlight");
+		$(this).parents(".card-header").toggleClass("highlight");
+	});
+});
+</script>
+    </head>
+    <body>
+        <div class="d-flex" id="wrapper">
+         
+        <!-- Page content wrapper-->
+        <div id="page-content-wrapper">
+            <!-- Top navigation-->
+   <nav class="navbar navbar-expand-lg navbar-dark bg-dark flex-md-nowrap p-1 shadow">
+                    <div class="container-fluid">
+                        <a class="navbar-brand text-light" href="index.html"><i class="fa fa-building"></i> SIKARYO</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+                                <li class="nav-item active"><a class="nav-link" href="index.html">Beranda</a></li>
+                                <li class="nav-item"><a class="nav-link" href="statistik.html">Statistik</a></li>
+                                <li class="nav-item"><a class="nav-link" href="persidangan.html">Persidangan</a></li>
+                                <li class="nav-item"><a class="nav-link" href="agenda.html">Agenda</a></li>
+                                <li class="nav-item"><a class="nav-link" href="protokol.html">Protokol</a></li>
+                                <li class="nav-item"><a class="nav-link" href="sinara.html">Sinara</a></li>
+                                <li class="nav-item"><a class="nav-link" href="publikasi.html">Publikasi</a></li>
+                                <li class="nav-item"><a class="nav-link" href="kebersihan.html">Kebersihan</a></li>
+                                <li class="nav-item"><a class="nav-link" href="keamanan.html">Keamanan</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            <main class="col-md-12 px-3">
+              <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                <h1 class="h6"><i class="fas fa-calendar"></i> Pengelolaan Kebersihan Gedung dan Bangunan</h1>
+              <div class="mb-3 text-center">
+        <button class="btn btn-outline-dark me-2" onclick="window.location.href='kebersihan.html'">
+          <i class="fas fa-file-lines"></i> Pedoman Pelaksanaan Tugas
+        </button>
+        <button class="btn btn-outline-dark" onclick="window.location.href='jadwalkebersihan.html'">
+          <i class="fas fa-file-lines"></i> Lihat Jadwal
+        </button>
+      </div>
+              </div>
+        
+            </main>
+            
+         <div id="box" class="container">
+      <h3>Jadwal Rolling Tenaga Operasional Pemeliharaan</h3>
+    <div id="table"></div>
+
+        <img src="img/area taman.png" alt="Area Taman" class="responsive">
+   
+  
+    </div>
+        </div>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+   <!-- Script Google Chart -->
+  <script>
+    google.charts.load('current', {packages: ['table']});
+    function drawVisualization() {
+      var query = new google.visualization.Query('https://spreadsheets.google.com/tq?key=1iy_lSuXelmdu9NbqZNvdJk1rfBXjZjB-f2_k9p3Dn0M&output=html&gid=328221063&range=A2:M&&usp=sharing');
+      query.setQuery('SELECT * label A "LANTAI ", B "AGUS", C "SEPT", D "OKT", E "NOV", F "DES", G "JAN", H "FEB", I "MAR", J "APR", K "MEI", L "JUN", M "JUL"');
+      query.send(handleQueryResponse);
+    }
+
+    function handleQueryResponse(response) {
+      if (response.isError()) {
+        alert('Query error: ' + response.getMessage());
+        return;
+      }
+      var data = response.getDataTable();
+      var visualization = new google.visualization.Table(document.getElementById('table'));
+      data.sort([{column: 0, desc: false},{column: 2, desc: false}]);
+      visualization.draw(data, {allowHtml: true, width: '100%'});
+    }
+    google.setOnLoadCallback(drawVisualization);
+  </script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+      
+    </body>
+</html>
