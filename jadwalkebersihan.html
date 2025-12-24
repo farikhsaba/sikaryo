@@ -213,8 +213,8 @@ $(document).ready(function(){
   <script>
     google.charts.load('current', {packages: ['table']});
     function drawVisualization() {
-      var query = new google.visualization.Query('https://spreadsheets.google.com/tq?key=1iy_lSuXelmdu9NbqZNvdJk1rfBXjZjB-f2_k9p3Dn0M&output=html&gid=328221063&range=A2:M&&usp=sharing');
-      query.setQuery('SELECT * label A "LANTAI ", B "AGUS", C "SEPT", D "OKT", E "NOV", F "DES", G "JAN", H "FEB", I "MAR", J "APR", K "MEI", L "JUN", M "JUL"');
+      var query = new google.visualization.Query('https://spreadsheets.google.com/tq?key=1iy_lSuXelmdu9NbqZNvdJk1rfBXjZjB-f2_k9p3Dn0M&output=html&gid=328221063&range=A1:M&&usp=sharing');
+      query.setQuery('SELECT * ');
       query.send(handleQueryResponse);
     }
 
