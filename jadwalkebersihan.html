@@ -210,26 +210,50 @@ $(document).ready(function(){
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
    <!-- Script Google Chart -->
-  <script>
-    google.charts.load('current', {packages: ['table']});
-    function drawVisualization() {
-      var query = new google.visualization.Query('https://spreadsheets.google.com/tq?key=1iy_lSuXelmdu9NbqZNvdJk1rfBXjZjB-f2_k9p3Dn0M&output=html&gid=328221063&range=A1:M&&usp=sharing');
-      query.setQuery('SELECT * ');
-      query.send(handleQueryResponse);
+ <script>
+  google.charts.load('current', { packages: ['table'] });
+
+  function drawVisualization() {
+    var query = new google.visualization.Query(
+      'https://spreadsheets.google.com/tq?' +
+      'key=1iy_lSuXelmdu9NbqZNvdJk1rfBXjZjB-f2_k9p3Dn0M' +
+      '&gid=328221063' +
+      '&range=A1:M' +
+      '&headers=1' +
+      '&output=html'
+    );
+
+    query.setQuery('SELECT *');
+    query.send(handleQueryResponse);
+  }
+
+  function handleQueryResponse(response) {
+    if (response.isError()) {
+      alert('Query error: ' + response.getMessage());
+      return;
     }
 
-    function handleQueryResponse(response) {
-      if (response.isError()) {
-        alert('Query error: ' + response.getMessage());
-        return;
-      }
-      var data = response.getDataTable();
-      var visualization = new google.visualization.Table(document.getElementById('table'));
-      data.sort([{column: 0, desc: false},{column: 2, desc: false}]);
-      visualization.draw(data, {allowHtml: true, width: '100%'});
-    }
-    google.setOnLoadCallback(drawVisualization);
-  </script>
+    var data = response.getDataTable();
+
+    // contoh sorting
+    data.sort([
+      { column: 0, desc: false },
+      { column: 2, desc: false }
+    ]);
+
+    var visualization = new google.visualization.Table(
+      document.getElementById('table')
+    );
+
+    visualization.draw(data, {
+      allowHtml: true,
+      width: '100%'
+    });
+  }
+
+  google.setOnLoadCallback(drawVisualization);
+</script>
+
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
